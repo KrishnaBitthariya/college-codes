@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="ECommerceERDiagram" name="E-Commerce ER Diagram">
+    <mxGraphModel dx="1093" dy="538" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- User Table -->
+        <mxCell id="User" value="User" style="shape=table;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="User_ID" value="User_ID (PK)" style="shape=tableColumn;" vertex="1" parent="User">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="First_Name" value="First_Name" style="shape=tableColumn;" vertex="1" parent="User">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Last_Name" value="Last_Name" style="shape=tableColumn;" vertex="1" parent="User">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Phone_No" value="Phone_No" style="shape=tableColumn;" vertex="1" parent="User">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Email" value="Email" style="shape=tableColumn;" vertex="1" parent="User">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DOB" value="DOB" style="shape=tableColumn;" vertex="1" parent="User">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Address Table -->
+        <mxCell id="Address" value="Address" style="shape=table;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="50" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Address_ID" value="Address_ID (PK)" style="shape=tableColumn;" vertex="1" parent="Address">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="User_ID_FK" value="User_ID (FK)" style="shape=tableColumn;" vertex="1" parent="Address">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="House" value="House" style="shape=tableColumn;" vertex="1" parent="Address">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="City" value="City" style="shape=tableColumn;" vertex="1" parent="Address">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="State" value="State" style="shape=tableColumn;" vertex="1" parent="Address">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Pincode" value="Pincode" style="shape=tableColumn;" vertex="1" parent="Address">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Cart Table -->
+        <mxCell id="Cart" value="Cart" style="shape=table;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Cart_ID" value="Cart_ID (PK)" style="shape=tableColumn;" vertex="1" parent="Cart">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="User_ID_Cart" value="User_ID (FK)" style="shape=tableColumn;" vertex="1" parent="Cart">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Total_Amount" value="Total_Amount" style="shape=tableColumn;" vertex="1" parent="Cart">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Product Table -->
+        <mxCell id="Product" value="Product" style="shape=table;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Product_ID" value="Product_ID (PK)" style="shape=tableColumn;" vertex="1" parent="Product">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Cart_ID_Product" value="Cart_ID (FK)" style="shape=tableColumn;" vertex="1" parent="Product">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Stock" value="Stock" style="shape=tableColumn;" vertex="1" parent="Product">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MRP" value="MRP" style="shape=tableColumn;" vertex="1" parent="Product">
+          <mxGeometry width="180" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="User_Address_Rel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" edge="1" parent="1" source="User" target="Address">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="User_Cart_Rel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" edge="1" parent="1" source="User" target="Cart">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Cart_Product_Rel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;" edge="1" parent="1" source="Cart" target="Product">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
